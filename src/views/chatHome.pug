@@ -10,15 +10,21 @@ html(lang="en")
       h1 Noom
     main 
       #welcome 
-        form
-          input(placeholder="room name", type="text", required)
+        form#name
+          input(type="text", placeholder="nickname")
+          button Save
+        form#enter
+          input(type="text", placeholder="room name", required)
           button Enter Room
-      #call
-        #myStream
-          video#myFace(autoplay, playsinline,witdh="400",height="400")
-          button#mute Mute
-          button#camera Turn Camera Off
-          select#cameras
-          video#peerFace(autoplay, playsinline,witdh="400",height="400")
+        h4 Open Rooms:
+        ul
+      #room 
+        h3
+        ul 
+        
+        form#msg
+          input(type="text", placeholder="message", required)
+          button Send
+
     script(src="/socket.io/socket.io.js") 
     script(src="/public/js/app.js") 
